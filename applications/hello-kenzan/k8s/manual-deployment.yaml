@@ -14,7 +14,7 @@ spec:
   type: NodePort
 
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: hello-kenzan
@@ -30,7 +30,7 @@ spec:
         tier: hello-kenzan
     spec:
       containers:
-      - image: 127.0.0.1:30400/hello-kenzan:latest
+      - image: 192.168.20.26:5000/learn/hello-kenzan:latest
         name: hello-kenzan
         ports:
         - containerPort: 80
